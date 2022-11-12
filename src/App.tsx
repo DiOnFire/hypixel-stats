@@ -1,8 +1,14 @@
 import { Button, Input } from '@nextui-org/react'
 import React, { FC } from 'react'
 import Navbar from './component/Navbar'
+import Hypixel from 'hypixel-api-reborn'
 
 const App: FC<{}> = () => {
+	const getPlayer = () => {
+		const client = new Hypixel.Client("")
+		client.getPlayer()
+	}
+
 	return (
 		<>
 			<Navbar />
